@@ -35,19 +35,17 @@ You can install these dependencies using pip:
 
 ```bash
 pip install numpy pandas scikit-learn matplotlib
+```
+## How to Use
 
+  - Report: Read the Fairness cw.pdf to understand the motivation, methodology, and results of the study.
+  - Notebook: Open the Fairness_notebook.ipynb file in a Jupyter environment to explore the code, run the models, and visualize the results. The notebook provides a step-by-step guide for reproducing the experiments from the report.
 
-How to Use
-
-    Report: Read the Fairness cw.pdf to understand the motivation, methodology, and results of the study.
-    Notebook: Open the Fairness_notebook.ipynb file in a Jupyter environment to explore the code, run the models, and visualize the results. The notebook provides a step-by-step guide for reproducing the experiments from the report.
-
-Key Findings
-
-    The experiments reveal that fairness-aware models, particularly those using reweighing techniques, can significantly reduce bias (as measured by EOP) without a substantial loss in accuracy.
-    A Pareto Efficiency approach was used to select models that optimize both fairness and accuracy, providing a balanced solution to the trade-offs observed in earlier methods.
+## Key Findings
+  - The experiments reveal that fairness-aware models, particularly those using reweighing techniques, can significantly reduce bias (as measured by EOP) without a substantial loss in accuracy.
+  - A Pareto Efficiency approach was used to select models that optimize both fairness and accuracy, providing a balanced solution to the trade-offs observed in earlier methods.
 
 References
 
-    Kamiran, F., Calders, T. Data preprocessing techniques for classification without discrimination. Knowl Inf Syst 33, 1–33 (2012). https://doi.org/10.1007/s10115-011-0463-8
-    Corporate Finance Institute. "Pareto Efficiency," https://corporatefinanceinstitute.com/resources/economics/pareto-efficiency/
+  Kamiran, F., Calders, T. Data preprocessing techniques for classification without discrimination. Knowl Inf Syst 33, 1–33 (2012). https://doi.org/10.1007/s10115-011-0463-8
+  Corporate Finance Institute. "Pareto Efficiency," https://corporatefinanceinstitute.com/resources/economics/pareto-efficiency/
