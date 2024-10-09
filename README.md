@@ -47,5 +47,5 @@ pip install numpy pandas scikit-learn matplotlib
 
 References
 
-  Kamiran, F., Calders, T. Data preprocessing techniques for classification without discrimination. Knowl Inf Syst 33, 1–33 (2012). https://doi.org/10.1007/s10115-011-0463-8
-  Corporate Finance Institute. "Pareto Efficiency," https://corporatefinanceinstitute.com/resources/economics/pareto-efficiency/
+  - Kamiran, F., Calders, T. Data preprocessing techniques for classification without discrimination. Knowl Inf Syst 33, 1–33 (2012). https://doi.org/10.1007/s10115-011-0463-8
+  - Corporate Finance Institute. "Pareto Efficiency," https://corporatefinanceinstitute.com/resources/economics/pareto-efficiency/
