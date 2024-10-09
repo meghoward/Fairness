@@ -1,39 +1,41 @@
+# Algorithmic Fairness in Machine Learning
+
 This repository contains two key files that explore the trade-offs between accuracy and fairness in machine learning models:
 
-    Fairness Report (PDF) – A detailed report documenting the results of experiments conducted to compare standard machine learning models and fairness-aware models, focusing on balancing accuracy and fairness.
-    Fairness Notebook (IPYNB) – A Jupyter notebook that includes the implementation of models, hyperparameter tuning, and fairness interventions using Python and machine learning libraries such as Scikit-learn.
+1. **Fairness Report (PDF)** – A detailed report documenting the results of experiments conducted to compare standard machine learning models and fairness-aware models, focusing on balancing accuracy and fairness.
+2. **Fairness Notebook (IPYNB)** – A Jupyter notebook that includes the implementation of models, hyperparameter tuning, and fairness interventions using Python and machine learning libraries such as Scikit-learn.
 
-Files
+## Files
 
-    Fairness cw.pdf: This report outlines the findings from a study on algorithmic fairness in machine learning models. It evaluates standard logistic regression models against fairness-aware models using metrics such as accuracy and Equality of Opportunity (EOP). The report introduces reweighing techniques to reduce bias and examines the trade-offs between fairness and performance.
-        Key Sections:
-            Introduction and Dataset Overview
-            Analysis of Standard and Fairness-aware Models
-            Model Selection based on Accuracy and Fairness
-            Pareto Efficiency as a Model Selection Criterion
-            Results Summary and Comparison of Models
+- **Fairness cw.pdf**: This report outlines the findings from a study on algorithmic fairness in machine learning models. It evaluates standard logistic regression models against fairness-aware models using metrics such as accuracy and Equality of Opportunity (EOP). The report introduces reweighing techniques to reduce bias and examines the trade-offs between fairness and performance.
+  - **Key Sections**:
+    - Introduction and Dataset Overview
+    - Analysis of Standard and Fairness-aware Models
+    - Model Selection based on Accuracy and Fairness
+    - Pareto Efficiency as a Model Selection Criterion
+    - Results Summary and Comparison of Models
 
-    Fairness_notebook.ipynb: This Jupyter notebook implements the machine learning experiments described in the report. It includes the following:
-        Data preprocessing and reweighing using Kamiran and Calders' 2012 method.
-        Logistic regression model training and hyperparameter tuning.
-        Fairness metrics calculation (Equality of Opportunity).
-        Visualization of the trade-offs between accuracy and fairness.
-        Final model selection using Pareto Efficiency.
+- **Fairness_notebook.ipynb**: This Jupyter notebook implements the machine learning experiments described in the report. It includes the following:
+  - Data preprocessing and reweighing using Kamiran and Calders' 2012 method.
+  - Logistic regression model training and hyperparameter tuning.
+  - Fairness metrics calculation (Equality of Opportunity).
+  - Visualization of the trade-offs between accuracy and fairness.
+  - Final model selection using Pareto Efficiency.
 
-Requirements
+## Requirements
 
 To run the Jupyter notebook, ensure that you have the following Python libraries installed:
 
-    numpy
-    pandas
-    scikit-learn
-    matplotlib
+- `numpy`
+- `pandas`
+- `scikit-learn`
+- `matplotlib`
 
 You can install these dependencies using pip:
 
-bash
-
+```bash
 pip install numpy pandas scikit-learn matplotlib
+
 
 How to Use
 
