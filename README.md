@@ -1,45 +1,81 @@
 # Algorithmic Fairness in Machine Learning
 
-This repository contains two key files that explore the trade-offs between accuracy and fairness in machine learning models:
+This repository explores the trade-offs between accuracy and fairness in machine learning models, focusing on standard and fairness-aware logistic regression models. The project implements and evaluates methods for improving model fairness, using Pareto Efficiency to balance accuracy and fairness.
 
-1. **Fairness Report (PDF)** – A detailed report documenting the results of experiments conducted to compare standard machine learning models and fairness-aware models, focusing on balancing accuracy and fairness.
-2. **Fairness Notebook (IPYNB)** – A Jupyter notebook that includes the implementation of models, hyperparameter tuning, and fairness interventions using Python and machine learning libraries such as Scikit-learn.
+## Key Results
 
-## Files
+- **Best Standard Model:** Achieved an accuracy of **0.75309** with an Equal Opportunity Difference (EOP) of **-0.61785**.
+- **Best Fairness-Aware Model:** Using reweighting, achieved an accuracy of **0.72029** with an EOP of **-0.03176**, demonstrating a significant reduction in bias.
+- **Pareto Efficiency Selection:** Identified models that optimized both accuracy and fairness:
+  - **Standard Model:** Accuracy **0.75239**, EOP **-0.65693**
+  - **Fairness-Aware Model:** Accuracy **0.72029**, EOP **-0.03176**
 
-- **Fairness cw.pdf**: This report outlines the findings from a study on algorithmic fairness in machine learning models. It evaluates standard logistic regression models against fairness-aware models using metrics such as accuracy and Equality of Opportunity (EOP). The report introduces reweighing techniques to reduce bias and examines the trade-offs between fairness and performance.
-  - **Key Sections**:
-    - Introduction and Dataset Overview
-    - Analysis of Standard and Fairness-aware Models
-    - Model Selection based on Accuracy and Fairness
-    - Pareto Efficiency as a Model Selection Criterion
-    - Results Summary and Comparison of Models
+## Repository Contents
 
-- **Fairness_notebook.ipynb**: This Jupyter notebook implements the machine learning experiments described in the report. It includes the following:
-  - Data preprocessing and reweighing using Kamiran and Calders' 2012 method.
+### Files
+
+- **`Fairness cw.pdf`**: A comprehensive report detailing:
+  - **Introduction**: Overview of algorithmic fairness and the problem statement.
+  - **Standard Models**: Evaluation of standard logistic regression models across hyperparameters (C and solver types).
+  - **Fairness-Aware Models**: Analysis using reweighing techniques by Kamiran and Calders (2012).
+  - **Model Selection**: Application of Pareto Efficiency to select optimal models.
+  - **Key Findings**: Trade-offs between fairness and accuracy and the effectiveness of fairness-aware approaches.
+  - **Figures**: Visualizations of accuracy and fairness metrics.
+
+- **`Fairness_notebook.ipynb`**: Jupyter notebook implementing:
+  - Data preprocessing and reweighing.
   - Logistic regression model training and hyperparameter tuning.
-  - Fairness metrics calculation (Equality of Opportunity).
-  - Visualization of the trade-offs between accuracy and fairness.
-  - Final model selection using Pareto Efficiency.
+  - Calculation of fairness metrics (e.g., Equality of Opportunity).
+  - Visualization of accuracy and fairness trade-offs.
+  - Pareto Efficiency-based model selection.
 
-## Requirements
+## Results Highlights
 
-To run the Jupyter notebook, ensure that you have the following Python libraries installed:
+### Standard Models
 
-- `numpy`
-- `pandas`
-- `scikit-learn`
-- `matplotlib`
+- **Highest Accuracy:**  
+  - **C:** 100, **Solver:** `saga`  
+  - **Accuracy:** 0.75309, **EOP:** -0.61785  
+- **Best Fairness:**  
+  - **C:** 1.0, **Solver:** `liblinear`  
+  - **Accuracy:** 0.75309, **EOP:** -0.61789  
 
-You can install these dependencies using pip:
+### Fairness-Aware Models (Reweighed)
+
+- **Highest Accuracy:**  
+  - **C:** 0.01, **Solver:** `sag`  
+  - **Accuracy:** 0.71903, **EOP:** -0.00144  
+- **Best Fairness:**  
+  - **C:** 0.0001, **Solver:** `saga`  
+  - **Accuracy:** 0.72029, **EOP:** -0.03176  
+
+### Pareto Efficiency
+
+- **Standard Model:**  
+  - **C:** 0.001, **Solver:** `liblinear`  
+  - **Accuracy:** 0.75239, **EOP:** -0.65693  
+- **Fairness-Aware Model:**  
+  - **C:** 0.0001, **Solver:** `saga`  
+  - **Accuracy:** 0.72029, **EOP:** -0.03176  
+
+## Usage
+
+### Prerequisites
+
+Install the required Python libraries:
 
 ```bash
 pip install numpy pandas scikit-learn matplotlib
 ```
-## How to Use
+## Running the Notebook
 
-  - Report: Read the Fairness cw.pdf to understand the motivation, methodology, and results of the study.
-  - Notebook: Open the Fairness_notebook.ipynb file in a Jupyter environment to explore the code, run the models, and visualize the results. The notebook provides a step-by-step guide for reproducing the experiments from the report.
+    Open the Fairness_notebook.ipynb file in Jupyter Notebook.
+    Follow the step-by-step implementation to preprocess data, train models, and evaluate results.
+    Modify hyperparameters to experiment with different trade-offs between accuracy and fairness.
+
+## Report
+
+Refer to Fairness cw.pdf for a detailed discussion of methods, results, and insights.
 
 ## Key Findings
   - The experiments reveal that fairness-aware models, particularly those using reweighing techniques, can significantly reduce bias (as measured by EOP) without a substantial loss in accuracy.
