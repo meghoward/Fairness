@@ -67,13 +67,13 @@ Install the required Python libraries:
 ```bash
 pip install numpy pandas scikit-learn matplotlib
 ```
-## Running the Notebook
+### Running the Notebook
 
     Open the Fairness_notebook.ipynb file in Jupyter Notebook.
     Follow the step-by-step implementation to preprocess data, train models, and evaluate results.
     Modify hyperparameters to experiment with different trade-offs between accuracy and fairness.
 
-## Report
+### Report
 
 Refer to Fairness cw.pdf for a detailed discussion of methods, results, and insights.
 
